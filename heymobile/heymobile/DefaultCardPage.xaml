@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="heymobile.DefaultCardPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="AliceBlue" Padding="0,20,0,15" >
+                <!--
+                <SearchBar x:Name="SearchBarCard"
+                
+                Margin="-22"
+                BackgroundColor="WhiteSmoke"
+                Placeholder="Search"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="Fill" 
+                Scale="0.92"/>  -->
+                <SearchBar x:Name="SearchBarCard"
+
+                BackgroundColor="AliceBlue"
+                Placeholder="Search"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="Fill" 
+                           
+                />
+            </StackLayout>
+            <FlexLayout IsEnabled="True" IsVisible="True" FlowDirection="LeftToRight" Margin="5" Padding="5,5,5,5" AlignContent="SpaceAround" Direction="Row">
+
+            </FlexLayout>
+            
+            
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

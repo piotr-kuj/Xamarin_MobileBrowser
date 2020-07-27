@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MobileAppWebBrowser"
+             x:Class="heymobile.MainPage"
+             
+             BackgroundColor="White">
+
+    <StackLayout x:Name="mainSL_START">
+        <!-- Place new controls here -->
+    	<Label Text="Welcome to Mobile Browser!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" 
+           FontAttributes="Bold"
+           IsVisible="True"
+           Scale="1.3"
+           TextColor="Black"/>
+
+        <Button x:Name="Start" ClassId="Start"
+            
+            Clicked="Start_Clicked"
+            
+            Text="Start"
+            TextColor="Black"
+            FontAttributes="Bold"
+            BackgroundColor="White"
+            BorderColor="Black"
+            IsVisible="True"
+            AutomationId=""
+            />
+        <StackLayout 
+            x:Name="mainSL_SKIP"
+            Padding="0,50,0,0" >
+
+            <Button x:Name="Skip"
+
+            Clicked="Skip_Clicked"     
+                
+            Text="Skip"
+            TextColor="Black"
+            FontAttributes="Bold"
+            BackgroundColor="White"
+            BorderColor="Black"
+            IsVisible="True"
+            />
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>

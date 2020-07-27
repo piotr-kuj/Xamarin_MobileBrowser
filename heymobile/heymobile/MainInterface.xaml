@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="heymobile.MainInterface"
+             Padding="0"
+             WidthRequest="0">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout BackgroundColor="AliceBlue"  Padding="0,20,0,15">
+                <!--<SearchBar x:Name="SearchBar"
+                Margin="-22"
+                SearchCommand="searchBarClicked"
+                SearchButtonPressed="searchBarClicked"
+                BackgroundColor="WhiteSmoke"
+                Placeholder="Enter web-address"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="Fill" 
+                Scale="0.85"/>-->
+                <SearchBar x:Name="SearchBar"
+                
+                SearchButtonPressed="searchBarClicked"                         
+                BackgroundColor="AliceBlue"
+                Placeholder="Enter web-address"
+                VerticalOptions="Start" 
+                HorizontalOptions="FillAndExpand"  />
+                
+                <ProgressBar x:Name="ProgressBarNavigating"
+                             ProgressColor="CornflowerBlue"
+                             BackgroundColor="WhiteSmoke"
+                             VerticalOptions="CenterAndExpand"
+                             Margin="10, 0"
+                             IsVisible="False"/>
+
+            </StackLayout>
+            <StackLayout BackgroundColor="AliceBlue" >
+                
+                <Label x:Name="LoadingLabel"
+                 Text="Loading"
+                 TextColor="Black"
+                 HorizontalOptions="Center"
+                 IsVisible="false" 
+                 IsEnabled="False"/>
+                
+                <FlexLayout IsEnabled="False" IsVisible="False" FlowDirection="LeftToRight" Margin="5" Padding="5,5,5,5" 
+                            AlignContent="SpaceAround" Direction="Row" VerticalOptions="StartAndExpand" >
+                    <Label Text="Google" FontSize="Small" Margin="5"/>
+                    <Image Source="google.png" />
+
+                </FlexLayout>
+                
+                <StackLayout IsEnabled="True" IsVisible="False" x:Name="TapCards" WidthRequest="500" HeightRequest="400" VerticalOptions="StartAndExpand">
+                    <Button x:Name="Tap_OpenNewCard" Text="Open new Card" HorizontalOptions="Center" Clicked="Tap_OpenNewCard_Clicked"></Button>
+                    <Button x:Name="Tap_OpenNCardInBG" Text="Open In Background" HorizontalOptions="Center" Clicked="Tap_OpenNCardInBG_Clicked" ></Button>
+                    <Button x:Name="Tap_Refresh" Text="Refresh" HorizontalOptions="Center" Clicked="Tap_Refresh_Clicked"></Button>
+                    <Button x:Name="Tap_Cancel" Text="Cancel" HorizontalOptions="End" Clicked="Tap_Cancel_Clicked"></Button>
+                </StackLayout>
+                
+                <WebView IsEnabled="true" IsVisible="True" x:Name="Browser" WidthRequest="1000" HeightRequest="1000" 
+                 Navigating="webOnNavigating" Navigated="webOnEndNavigating" VerticalOptions="StartAndExpand" />
+
+
+                
+                <StackLayout x:Name="MenuSlideFromBottom"
+                             HeightRequest="0"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="End"
+                             BackgroundColor="AliceBlue"
+                             IsVisible="True">
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="*" HorizontalOptions="Start" BackgroundColor="AliceBlue"
+                            Clicked="openMenuSettings">
+                        </Button>
+
+                        <Button HorizontalOptions="EndAndExpand" Text="Cards" Clicked="OpenCardsMenu" BackgroundColor="AliceBlue">
+
+                        </Button>
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Lists" HorizontalOptions="Start" BackgroundColor="AliceBlue"
+                            Clicked="openMenuLists">
+                        </Button>
+
+                        <!--
+                        <Button Text="ADD BM" HorizontalOptions="EndAndExpand" Clicked="AddToBookmark"> 
+                            
+                        </Button>
+                        -->
+                      
+                    </StackLayout>
+                    
+                </StackLayout>
+                
+                <BoxView x:Name="MenuTopBlackBar" VerticalOptions="End" WidthRequest="100" HeightRequest="0.5" BackgroundColor="Black" />
+                
+                <StackLayout MinimumHeightRequest="50" BackgroundColor="AliceBlue" VerticalOptions="End" Orientation="Horizontal" Padding="10,-5,0,-2">
+                    <Button  Text="&lt;"  FontSize="Large" BackgroundColor="AliceBlue"  HorizontalOptions="StartAndExpand" Clicked="backClicked" />
+                    <Button x:Name="imageLogo" Text="Settings" BackgroundColor="AliceBlue" Scale="0.8"  HeightRequest="50"   HorizontalOptions="Center" VerticalOptions="End" Clicked="openMenu" />
+                    <Button  Text="&gt;" FontSize="Large" BackgroundColor="AliceBlue"   HorizontalOptions="EndAndExpand" Clicked="forwardClicked" />
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

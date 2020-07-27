@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="heymobile.Instruction"
+             BackgroundColor="AliceBlue">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Instruction"
+                   TextColor="Black"
+                   FontSize="Large"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal" >
+
+            <Button Text="Previous page"
+                    
+                    Clicked="Previous_Clicked"
+                    
+                    TextColor="Black"
+                    FontSize="Micro"
+                    BackgroundColor="AliceBlue"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="StartAndExpand"/>
+                
+            <Button Text="Next page"
+                    
+                    Clicked="Next_Clicked"
+                    
+                    TextColor="Black"
+                    FontSize="Micro"
+                    BackgroundColor="AliceBlue"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="EndAndExpand"/>
+
+            </StackLayout>
+            <Label Text="..."
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+
+            
+            <Button Text="Skip"
+                    
+                    Clicked="Skip_Clicked"
+                    
+                    TextColor="Black"
+                    BackgroundColor="AliceBlue"
+                    VerticalOptions="EndAndExpand" 
+                    HorizontalOptions="EndAndExpand"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

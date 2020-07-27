@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="heymobile.Settings"
+             BackgroundColor="WhiteSmoke">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Settings" FontSize="Medium" TextColor="Black" HorizontalOptions="Center"></Label>
+            <BoxView WidthRequest="100" HeightRequest="1" BackgroundColor="Black"></BoxView>
+            <TableView Intent="Settings">
+                <TableRoot >
+                    <TableSection Title="Switch">
+                        <SwitchCell x:Name="notificationCell" Text="Notification" On="False" OnChanged="Notification_onChanged"/>
+                    </TableSection>
+                    <TableSection Title="Text">
+                        <TextCell x:Name="txtcell" Text="textcell"/>
+                    </TableSection>
+                    <TableSection Title="imagecell">
+                        <ImageCell x:Name="imgcell" Text="imagecell"/>
+                    </TableSection>
+                    <TableSection Title="entry">
+                        <EntryCell x:Name="entcell" Text="entrcell"/>
+                    </TableSection>
+                    <TableSection Title="View">
+                        <!--<ViewCell x:Name="viewcell" />-->
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
