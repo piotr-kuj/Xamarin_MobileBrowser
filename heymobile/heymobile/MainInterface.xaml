@@ -6,7 +6,7 @@
              WidthRequest="0">
     <ContentPage.Content>
         <StackLayout>
-
+            
             <StackLayout BackgroundColor="AliceBlue"  Padding="0,20,0,15">
                 <!--<SearchBar x:Name="SearchBar"
                 Margin="-22"

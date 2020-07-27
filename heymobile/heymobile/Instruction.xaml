@@ -12,6 +12,7 @@
                 HorizontalOptions="Center" />
             <StackLayout Orientation="Horizontal" >
 
+                
             <Button Text="Previous page"
                     
                     Clicked="Previous_Clicked"

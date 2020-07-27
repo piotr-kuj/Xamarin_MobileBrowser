@@ -4,9 +4,8 @@
              x:Class="heymobile.HistoryBookmarksTabbedPage">
   <!--Pages can be added as references or inline-->
     <ContentPage x:Name="MostVisitiedPage"  Title="Most Visited" BackgroundColor="AliceBlue">
-        
-        <ListView x:Name="MostVisitedListView">
 
+        <ListView x:Name="MostVisitedListView">
 
         </ListView>
 

@@ -16,7 +16,6 @@ namespace heymobile
 		{
 			InitializeComponent ();
 		}
-
         private async void Skip_Clicked(object sender, EventArgs e)
         {
             var button = (Button)sender;

@@ -330,6 +330,7 @@ namespace heymobile
             TapCards.IsVisible = false;
         }
 
+
         private void Tap_Refresh_Clicked(object sender, EventArgs e)
         {
             Browser.Source = (Browser.Source as UrlWebViewSource).Url;
